@@ -80,35 +80,35 @@ export default {
   router: {
     middleware: 'nav',
     extendRoutes (routes, resolve) {
-      const indexIndex = routes.findIndex(route => route.chunkName === 'pages/column/index')
-      let index = routes[indexIndex].children.findIndex(route => route.name === 'column-index')
-      routes[indexIndex].children[index] = {
-        ...routes[indexIndex].children[index],
-        components: {
-          default: routes[indexIndex].children[index].component,
-          columnList: resolve(__dirname, 'components/column-list.vue')
-        },
-        chunkNames: {
-          columnList: 'components/column-list'
-        }
-      }
+      // const indexIndex = routes.findIndex(route => route.chunkName === 'pages/column/index')
+      // let index = routes[indexIndex].children.findIndex(route => route.name === 'column-index')
+      // routes[indexIndex].children[index] = {
+      //   ...routes[indexIndex].children[index],
+      //   components: {
+      //     default: routes[indexIndex].children[index].component,
+      //     columnList: resolve(__dirname, 'components/column-list.vue')
+      //   },
+      //   chunkNames: {
+      //     columnList: 'components/column-list'
+      //   }
+      // }
 
-      const aboutIndex = routes.findIndex(route => route.chunkName === 'pages/about/index')
-      let aindex = routes[aboutIndex].children.findIndex(route => route.name === 'about-index')
-      routes[aboutIndex].children[aindex] = {
-        ...routes[aboutIndex].children[aindex],
-        components: {
-          default: routes[aboutIndex].children[aindex].component,
-          contact: resolve(__dirname, 'components/about/contact.vue'),
-          news: resolve(__dirname, 'components/about/news.vue'),
-          recruit: resolve(__dirname, 'components/about/recruit.vue')
-        },
-        chunkNames: {
-          contact: 'components/contact',
-          news: 'components/news',
-          recruit: 'components/recruit'
-        }
-      }
+      // const aboutIndex = routes.findIndex(route => route.chunkName === 'pages/about/index')
+      // let aindex = routes[aboutIndex].children.findIndex(route => route.name === 'about-index')
+      // routes[aboutIndex].children[aindex] = {
+      //   ...routes[aboutIndex].children[aindex],
+      //   components: {
+      //     default: routes[aboutIndex].children[aindex].component,
+      //     contact: resolve(__dirname, 'components/about/contact.vue'),
+      //     news: resolve(__dirname, 'components/about/news.vue'),
+      //     recruit: resolve(__dirname, 'components/about/recruit.vue')
+      //   },
+      //   chunkNames: {
+      //     contact: 'components/contact',
+      //     news: 'components/news',
+      //     recruit: 'components/recruit'
+      //   }
+      // }
     }
   }
 }

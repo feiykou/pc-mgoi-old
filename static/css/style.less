@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft JhengHei", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+    transition: none .2s cubic-bezier(.215,.61,.355,1);
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+a:hover{
+    opacity: 0.6;
+    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+    transition: none .2s cubic-bezier(.215,.61,.355,1);
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+/*
+* 字体库
+* */
+@font-face {
+	font-family: 'iconfont';  /* project id 1144491 */
+	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot');
+	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff') format('woff'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.svg#iconfont') format('svg');
+}
+
+.iconfont{
+	font-family: iconfont;
+}
+
+// 按钮动画
+.btn-animate{
+    cursor: pointer;
+    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+    transition: none .2s cubic-bezier(.215,.61,.355,1);
+    -webkit-transition-property: opacity,border-color,background-color,color;
+    transition-property: opacity,border-color,background-color,color;
+    
+}
+
+.btn-gray{
+    &:hover{
+        border-color: #cbcbcb!important;
+        background-color: #cbcbcb!important;
+    }
+}
+
+.btn-primary{
+    &:hover{
+        border-color: #30c9e3!important;
+        background-color: #30c9e3!important;
+        color: #fff!important;
+    }
+}
+
+
+// 左侧菜单
+.menu-left-wrap{
+    width: 196px;
+    flex: 0 0 196px;
+}
+
+
+// 动画
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}

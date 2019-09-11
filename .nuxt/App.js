@@ -9,8 +9,9 @@ import '..\\static\\css\\style.css'
 import '..\\static\\css\\animate.min.css'
 
 import _6f6c098b from '..\\layouts\\default.vue'
+import _7164a301 from '..\\layouts\\erro1r.vue'
 
-const layouts = { "_default": _6f6c098b }
+const layouts = { "_default": _6f6c098b,"_erro1r": _7164a301 }
 
 export default {
   head: {"title":"mgoi-pc","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My astounding Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},

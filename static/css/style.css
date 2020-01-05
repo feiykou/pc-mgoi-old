@@ -6,7 +6,7 @@ html,
 body {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft JhengHei", "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 ul,
 li {
@@ -31,17 +31,66 @@ a:hover {
   -webkit-transition-property: opacity;
   transition-property: opacity;
 }
+img {
+  vertical-align: middle;
+  line-height: 1;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+}
+.font12 {
+  font-size: 12px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font20 {
+  font-size: 20px;
+}
+.font22 {
+  font-size: 22px;
+}
+.font24 {
+  font-size: 24px;
+}
+.font26 {
+  font-size: 26px;
+}
+.font28 {
+  font-size: 28px;
+}
+.font30 {
+  font-size: 30px;
+}
+.bold {
+  font-weight: bold;
+}
 /*
 * 字体库
 * */
 @font-face {
   font-family: 'iconfont';
-  /* project id 1144491 */
-  src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot');
-  src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff2') format('woff2'), url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff') format('woff'), url('//at.alicdn.com/t/font_1144491_4pltizolm7y.ttf') format('truetype'), url('//at.alicdn.com/t/font_1144491_4pltizolm7y.svg#iconfont') format('svg');
+  /* project id 1214968 */
+  src: url('//at.alicdn.com/t/font_1214968_hulgcwiadre.eot');
+  src: url('//at.alicdn.com/t/font_1214968_hulgcwiadre.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1214968_hulgcwiadre.woff2') format('woff2'), url('//at.alicdn.com/t/font_1214968_hulgcwiadre.woff') format('woff'), url('//at.alicdn.com/t/font_1214968_hulgcwiadre.ttf') format('truetype'), url('//at.alicdn.com/t/font_1214968_hulgcwiadre.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: iconfont;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-animate {
   cursor: pointer;
@@ -50,36 +99,55 @@ a:hover {
   -webkit-transition-property: opacity, border-color, background-color, color;
   transition-property: opacity, border-color, background-color, color;
 }
-.btn-gray:hover {
-  border-color: #cbcbcb!important;
-  background-color: #cbcbcb!important;
-}
-.btn-primary:hover {
-  border-color: #30c9e3!important;
-  background-color: #30c9e3!important;
-  color: #fff!important;
+.main-section {
+  padding-top: 92px;
 }
 .menu-left-wrap {
   width: 196px;
   flex: 0 0 196px;
+  overflow: hidden;
 }
-.cate-wrap {
-  max-height: 1000px;
-  padding-top: 15px;
-  margin-top: 30px;
-  overflow-y: auto;
-  border-top: 3px solid #707070;
+.content-right-wrap {
+  flex: 1;
+  padding-left: 42px;
+}
+.el-breadcrumb {
+  display: flex;
+  height: auto!important;
+  align-items: center;
+  padding-bottom: 28px;
+}
+.el-breadcrumb .crumb-item {
+  cursor: pointer;
+}
+.el-breadcrumb .el-breadcrumb__separator,
+.el-breadcrumb .el-breadcrumb__inner {
+  color: #333 !important;
+}
+.el-breadcrumb .el-breadcrumb__inner a,
+.el-breadcrumb .el-breadcrumb__inner.is-link {
+  font-weight: normal;
+}
+.el-breadcrumb .el-breadcrumb__inner a:hover,
+.el-breadcrumb .crumb-item .el-breadcrumb__inner:hover,
+.el-breadcrumb .el-breadcrumb__inner.is-link:hover {
+  color: #333;
+  opacity: 0.6;
+}
+.el-breadcrumb .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  color: #333;
+  font-weight: bold;
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
@@ -89,3 +157,4 @@ a:hover {
   transform: translateX(10px);
   opacity: 0;
 }
+/*# sourceMappingURL=style.css.map */

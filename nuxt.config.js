@@ -19,7 +19,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
- loading: '@/components/loading.vue',
+  loading: '@/components/loading.vue',
   /*
   ** Global CSS
   */
@@ -34,6 +34,7 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/global',
+    '@/plugins/components',
     {src: '@/plugins/vue-lazyload.js', ssr: false}
   ],
   /*
@@ -60,7 +61,7 @@ export default {
   ** Build configuration
   */
   build: {
-    analyze: true, 
+    analyze: false, 
     transpile: [/^element-ui/],
     vendor: ['element-ui','axios'],
     extractCSS: { allChunks: true },
@@ -81,17 +82,17 @@ export default {
     middleware: 'nav',
     extendRoutes (routes, resolve) {
       const indexIndex = routes.findIndex(route => route.chunkName === 'pages/column/index')
-      let index = routes[indexIndex].children.findIndex(route => route.name === 'column-index')
-      routes[indexIndex].children[index] = {
-        ...routes[indexIndex].children[index],
-        components: {
-          default: routes[indexIndex].children[index].component,
-          columnList: resolve(__dirname, 'components/column-list.vue')
-        },
-        chunkNames: {
-          columnList: 'components/column-list'
-        }
-      }
+      // let index = routes[indexIndex].children.findIndex(route => route.name === 'column-index')
+      // routes[indexIndex].children[index] = {
+      //   ...routes[indexIndex].children[index],
+      //   components: {
+      //     default: routes[indexIndex].children[index].component,
+      //     columnList: resolve(__dirname, 'components/column-list.vue')
+      //   },
+      //   chunkNames: {
+      //     columnList: 'components/column-list'
+      //   }
+      // }
 
       const aboutIndex = routes.findIndex(route => route.chunkName === 'pages/about/index')
       let aindex = routes[aboutIndex].children.findIndex(route => route.name === 'about-index')

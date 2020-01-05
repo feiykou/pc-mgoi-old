@@ -6,7 +6,7 @@
 html,body{
     font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft JhengHei", "Microsoft YaHei", Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 ul,li{
@@ -34,63 +34,120 @@ a:hover{
     transition-property: opacity;
 }
 
+img{
+  vertical-align: middle;
+  line-height: 1;
+}
+.img{
+  max-width: 100%;
+  height: auto;
+}
+
+//.hover-class{
+//  opacity: 0.6;
+//  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+//  transition: none .2s cubic-bezier(.215,.61,.355,1);
+//  -webkit-transition-property: opacity;
+//  transition-property: opacity;
+//}
+
+// 字体
+.font12{ font-size: 12px; }
+.font14{ font-size: 14px; }
+.font16{ font-size: 16px; }
+.font18{ font-size: 18px; }
+.font20{ font-size: 20px; }
+.font22{ font-size: 22px; }
+.font24{ font-size: 24px; }
+.font26{ font-size: 26px; }
+.font28{ font-size: 28px; }
+.font30{ font-size: 30px; }
+
+
+
+// 设置字体样式
+.bold{ font-weight: bold; }
+
 /*
 * 字体库
 * */
 @font-face {
-	font-family: 'iconfont';  /* project id 1144491 */
-	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot');
-	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot?#iefix') format('embedded-opentype'),
-	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff2') format('woff2'),
-	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff') format('woff'),
-	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.ttf') format('truetype'),
-	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 1214968 */
+  src: url('//at.alicdn.com/t/font_1214968_hulgcwiadre.eot');
+  src: url('//at.alicdn.com/t/font_1214968_hulgcwiadre.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1214968_hulgcwiadre.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1214968_hulgcwiadre.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1214968_hulgcwiadre.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1214968_hulgcwiadre.svg#iconfont') format('svg');
 }
 
 .iconfont{
 	font-family: iconfont;
 }
 
+// 禁止选中文本
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 // 按钮动画
 .btn-animate{
-    cursor: pointer;
-    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
-    transition: none .2s cubic-bezier(.215,.61,.355,1);
-    -webkit-transition-property: opacity,border-color,background-color,color;
-    transition-property: opacity,border-color,background-color,color;
-    
+  cursor: pointer;
+  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+  transition: none .2s cubic-bezier(.215,.61,.355,1);
+  -webkit-transition-property: opacity,border-color,background-color,color;
+  transition-property: opacity,border-color,background-color,color;
 }
 
-.btn-gray{
-    &:hover{
-        border-color: #cbcbcb!important;
-        background-color: #cbcbcb!important;
-    }
+// 公共内容区块
+.main-section{
+  padding-top: 92px;
 }
-
-.btn-primary{
-    &:hover{
-        border-color: #30c9e3!important;
-        background-color: #30c9e3!important;
-        color: #fff!important;
-    }
-}
-
 
 // 左侧菜单
 .menu-left-wrap{
     width: 196px;
     flex: 0 0 196px;
+    overflow: hidden;
 }
-// 分类菜单
-.cate-wrap{
-    max-height: 1000px;
-    padding-top: 15px;
-    margin-top: 30px;
-    overflow-y: auto;
-    border-top: 3px solid #707070;
+// 右侧内容区域
+.content-right-wrap{
+  flex: 1;
+  padding-left: 42px;
 }
 
+// 面包屑
+.el-breadcrumb{
+  display: flex;
+  height: auto!important;
+  align-items: center;
+  padding-bottom: 28px;
+  .crumb-item{
+    cursor: pointer;
+  }
+  // 箭头颜色
+  .el-breadcrumb__separator,.el-breadcrumb__inner{
+    color: #333!important;
+  }
+  // 链接样式
+  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link{
+    font-weight: normal;
+  }
+  .el-breadcrumb__inner a:hover, .crumb-item .el-breadcrumb__inner:hover, .el-breadcrumb__inner.is-link:hover{
+    color: #333;
+    opacity: 0.6;
+  }
+  // 设置最后一级样式
+  .el-breadcrumb__item:last-child .el-breadcrumb__inner{
+      color: #333;
+      font-weight: bold;
+  }
+}
 
 // 动画
 .fade-enter-active, .fade-leave-active {
